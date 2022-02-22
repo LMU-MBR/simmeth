@@ -38,3 +38,9 @@ sim.run()
 In order to plot simulation results you can call `sim.plot_scenarios()`.
 
 ![](./docs/assets/sim_plot.png)
+
+# Change History :arrows_counterclockwise:
+
+## Version 0.0.9
+- perform `shock` only when `turb>0`
+- 

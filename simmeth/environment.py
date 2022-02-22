@@ -96,7 +96,8 @@ class Environment:
             # update the distribution for the strategy we just executed
             best_strategy.belief.update(x)
 
-            self.shock()
+            if self.turb > 0:
+                self.shock()
 
     def get_strategy_df(self):
         df = pd.DataFrame()

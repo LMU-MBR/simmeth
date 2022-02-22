@@ -16,9 +16,7 @@ class Simulation:
         self.results = np.empty([len(self.scenarios), self.n, self.t])
 
     def run(self):
-
         for i in range(len(self.scenarios)):
-
             for j in range(self.n):
                 strategy_probabilities = np.sort(np.random.rand(self.n_strategies))
                 env = Environment(name=j,

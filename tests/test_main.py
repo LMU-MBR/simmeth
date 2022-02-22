@@ -1,7 +1,10 @@
+import time
+
 from simmeth.simulation import Simulation
 
 
 def test_basic_simulation():
+    start = time.time()
     env_scenarios = [
         {
             'turb': 0,
@@ -9,14 +12,13 @@ def test_basic_simulation():
             'unlearn': True
         }
     ]
-    sim = Simulation(scenarios=env_scenarios, n_strategies=3, t=100, n=100)
+    sim = Simulation(scenarios=env_scenarios, n_strategies=3, t=500, n=1000)
 
     sim.run()
 
-    df = sim.get_env_strategy_dfs()
-    print(df.head(10))
+    end = time.time()
 
-    sim.plot_scenarios()
+    print(end - start)
 
 
 test_basic_simulation()
