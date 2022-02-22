@@ -21,11 +21,13 @@ class Simulation:
 
             for j in range(self.n):
                 strategy_probabilities = np.sort(np.random.rand(self.n_strategies))
-                env = Environment(strategy_probs=strategy_probabilities, T=self.t, turb=self.scenarios[i]["turb"],
+                env = Environment(name=j,
+                                  strategy_probs=strategy_probabilities,
+                                  T=self.t,
+                                  turb=self.scenarios[i]["turb"],
                                   belief=Belief,
                                   max_confidence=self.scenarios[i]["max_confidence"],
-                                  unlearn=self.scenarios[i]["unlearn"],
-                                  name=self.scenarios[i]["prefix"] + str(j))
+                                  unlearn=self.scenarios[i]["unlearn"])
                 env.simulate()
                 self.envs_history.append(env)
                 self.results[i, j, :] = env.results

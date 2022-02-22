@@ -22,7 +22,7 @@ class Environment:
       name (string): Custom name for environment (can be used to differentiate between envs)
     """
 
-    def __init__(self, strategy_probs, T, turb=0, belief=Belief, max_confidence=1, unlearn=False, name="MyEnv"):
+    def __init__(self, name, strategy_probs, T, turb=0, belief=Belief, max_confidence=1, unlearn=False):
         self.strategy_probs = strategy_probs
         self.T = T
         self.t = 0  # counter for current step environment is in
