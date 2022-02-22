@@ -1,4 +1,4 @@
-from src.simmeth.simulation.simulation import Simulation
+from simmeth.simulation import Simulation
 
 
 def test_basic_simulation():

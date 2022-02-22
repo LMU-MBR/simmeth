@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
-from src.simmeth.agent.belief import Belief
-from src.simmeth.environment.environment import Environment
+from simmeth.belief import Belief
+from simmeth.environment import Environment
 
 
 class Simulation:
