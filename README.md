@@ -24,7 +24,6 @@ from simmeth.simulation import Simulation
 
 env_scenarios = [
     {
-        'prefix': "no_turb",
         'turb': 0,
         'max_confidence': 1,
         'unlearn': True
@@ -33,3 +32,9 @@ env_scenarios = [
 sim = Simulation(scenarios=env_scenarios, n_strategies=3, t=100, n=100)
 sim.run()
 ```
+
+## Plot Simulation Results
+
+In order to plot simulation results you can call `sim.plot_scenarios()`.
+
+![](./docs/assets/sim_plot.png)

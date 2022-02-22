@@ -16,5 +16,7 @@ def test_basic_simulation():
     df = sim.get_env_strategy_dfs()
     print(df.head(10))
 
+    sim.plot_scenarios()
+
 
 test_basic_simulation()
