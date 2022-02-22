@@ -1,10 +1,9 @@
-import time
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
-from simmeth.agent.belief import Belief
-from simmeth.environment.environment import Environment
+from src.simmeth.agent.belief import Belief
+from src.simmeth.environment.environment import Environment
 
 
 class Simulation:

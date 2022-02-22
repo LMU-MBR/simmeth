@@ -2,9 +2,9 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
-from simmeth.agent.alternative import Alternative
-from simmeth.agent.belief import Belief
-from simmeth.agent.strategy import Strategy
+from src.simmeth.agent.alternative import Alternative
+from src.simmeth.agent.belief import Belief
+from src.simmeth.agent.strategy import Strategy
 
 
 class Environment:

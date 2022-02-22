@@ -1,4 +1,4 @@
-from simmeth.simulation.simulation import Simulation
+from src.simmeth.simulation.simulation import Simulation
 
 
 def test_basic_simulation():
@@ -12,3 +12,6 @@ def test_basic_simulation():
     ]
     sim = Simulation(scenarios=env_scenarios, n_strategies=3, t=100, n=100)
     sim.run()
+
+
+test_basic_simulation()

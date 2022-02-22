@@ -1,8 +1,9 @@
-from simmeth.simulation.simulation import Simulation
+from src.simmeth.simulation.simulation import Simulation
 
 if __name__ == "__main__":
     env_scenarios = [
         {
+            'prefix': "no_turb",
             'turb': 0,
             'max_confidence': 1,
             'unlearn': True
