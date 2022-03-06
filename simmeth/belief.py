@@ -26,7 +26,10 @@ class Belief:
         return np.random.beta(self.a, self.b)
 
     def get_confidence(self):
-        return 1 - sqrt((self.a * self.b) / ((self.a + self.b + 1) * ((self.a + self.b) ** 2)))  # =sd
+        """Returns confidence, i.e. 1 - (normalized s.d.)"""
+        sd = sqrt((self.a * self.b) / ((self.a + self.b + 1) * ((self.a + self.b) ** 2)))
+        max_sd = sqrt(1 / 12)  # sd is max for U(0,1)
+        return (max_sd - sd) / max_sd
 
     def get_mean_belief(self):
         return self.a / (self.a + self.b)
@@ -38,7 +41,7 @@ class Belief:
             self.b += (1 - x)
 
     def unlearn(self):
-        """Reduces the confidence we have in belief, i.e. a, b converge to 1."""
+        """Forget all knowledge, i.e. return to uniform distribution."""
         self.a = 1
         self.b = 1
 
